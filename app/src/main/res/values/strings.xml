@@ -1,0 +1,96 @@
+<resources>
+
+    <string name="text_app_update">Update %s is available. For better experience please update application.</string>
+    <string name="update_is_available">Update Is Available</string>
+
+    <!--custom fonts-->
+    <string name="heebo_bold">heebo_bold.ttf</string>
+    <string name="heebo_extra_bold">heebo_extra_bold.ttf</string>
+    <string name="heebo_medium">heebo_medium.ttf</string>
+    <string name="heebo_regular">heebo_regular.ttf</string>
+    <string name="heebo_thin">heebo_thin.ttf</string>
+    <string name="heebo_light">heebo_light.ttf</string>
+
+    <string name="text_side_menu_my_markets">My Markets</string>
+    <string name="text_side_menu_cricket">Cricket</string>
+    <string name="text_side_menu_football">Soccer</string>
+    <string name="text_side_menu_tennis"> Tennis</string>
+    <string name="text_side_menu_horse_racing">Horse Racing</string>
+    <string name="text_side_menu_greyhound_racing">Greyhound Racing</string>
+    <string name="text_balance_information">Balance Information</string>
+    <string name="available_credit">Available Credit</string>
+    <string name="credit_limit">Credit Limit</string>
+    <string name="winnings">Winnings</string>
+    <string name="net_exposure">Net Exposure</string>
+    <string name="my_bets">My Bets</string>
+    <string name="betting_p_l"><![CDATA[Profit & Loss]]></string>
+    <string name="transfer_statement">Transfer Statement</string>
+    <string name="time_setting">Time Setting</string>
+    <string name="change_password">Change Password</string>
+    <string name="rules_regulations"><![CDATA[Rules & Regulations]]></string>
+    <string name="settings">Settings</string>
+    <string name="sign_out">Logout</string>
+    <string name="log_in">Log in</string>
+    <string name="powered_by">Powered by</string>
+    <string name="betfair">betfair</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="my_markets">My Markets</string>
+    <string name="you_have_no_open_bets">You have no open bets.</string>
+    <string name="in_play">In Play</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="india_v_west_indies">India V West Indies</string>
+    <string name="india">India</string>
+    <string name="competitions">Competitions</string>
+    <string name="top_3_of_11_runners_opens_in_3mins">Top 3 of 11 runners(opens in 3mins)</string>
+    <string name="betting_profit_amp_loss"><![CDATA[Betting Profit & Loss]]></string>
+    <string name="there_are_no_settled_bets_in_the_last_7_days">There are no settled bets in the last 7 days.</string>
+    <string name="there_have_been_no_transfers_in_the_last_14_days">There have been no transfers in the last 14 days.</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="renew_password">Confirm Password</string>
+    <string name="save">Save</string>
+    <string name="submit">Submit</string>
+    <string name="account_statement">Account Statement</string>
+    <string name="type">Type</string>
+    <string name="bet_history">Bet History</string>
+    <string name="from_date">From Date</string>
+    <string name="enter_start_date">Enter start date</string>
+    <string name="to_date">To Date</string>
+    <string name="enter_end_date">Enter end date</string>
+    <string name="please_enter_start_time">Please enter start time</string>
+    <string name="please_enter_end_time">Please enter end time</string>
+    <string name="to_time">To Time</string>
+    <string name="reset">Reset</string>
+    <string name="export_to_excel">Export to Excel</string>
+    <string name="total_profit">Total Profit:</string>
+    <string name="Grand_total_profit">Grand Total Profit:</string>
+    <string name="total_p_amp_l"><![CDATA[Total P&L:]]></string>
+    <string name="Grand_total_p_amp_l"><![CDATA[Grand Total P&L:]]></string>
+    <string name="grand_total_liability">Grand Total Liability:</string>
+    <string name="total_liability">Total Liability:</string>
+    <string name="profit_amp_loss"><![CDATA[Profit & Loss]]></string>
+    <string name="no_records_found">No records found.</string>
+    <string name="total_credit">Total Credit:</string>
+    <string name="total_debit">Total Debit:</string>
+    <string name="total_balance">Total Balance:</string>
+    <string name="search">Search</string>
+    <string name="ledger">Ledger</string>
+    <string name="one_page_report">One Page Report</string>
+    <string name="favourites">Favourites</string>
+
+
+    <!--Sunil-->
+    <string name="match_odds">Match Odds</string>
+    <string name="text_back">BACK</string>
+    <string name="text_lay">LAY</string>
+    <string name="session_runs">Session Runs</string>
+    <string name="text_fancy">Fancy</string>
+    <string name="p_l"><![CDATA[P&L]]></string>
+    <string name="accept_terms_conditions"><![CDATA[ACCEPT TERMS & CONDITIONS]]></string>
+    <string name="please_wait">Please wait...</string>
+    <string name="from_time">From Time</string>
+    <string name="winning_amount">Winning Amount</string>
+
+
+</resources>

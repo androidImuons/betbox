@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'io.fabric'
+
+android {
+    flavorDimensions "server", "client"
+
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.betbox"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 12
+        versionName "1.1.2"
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+
+        liveConfig {
+            Properties keystore_properties = new Properties();
+            keystore_properties.load(project.rootProject.file('keystore/keystore.properties')
+                    .newDataInputStream())
+
+            keyAlias keystore_properties.getProperty("KEY_ALIAS")
+            keyPassword keystore_properties.getProperty("KEY_PASSWORD")
+            storeFile new File(rootDir, keystore_properties.getProperty("STORE_PATH"))
+            storePassword keystore_properties.getProperty("STORE_PASSWORD")
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.liveConfig
+        }
+        debug {
+            debuggable true
+            signingConfig signingConfigs.liveConfig
+        }
+    }
+
+
+    productFlavors {
+        dev {
+            dimension "client"
+        }
+
+        betbox {
+            dimension "server"
+            applicationId "com.betbox"
+            buildConfigField "String", "TV_ACTIVE", "\"N\""
+            buildConfigField "String", "SINGLE_BET_ACTIVE", "\"Y\""
+        }
+
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def buildDate = new Date().format("dd_MM_yyyy")
+            def buildType = variant.getBuildType().name
+            def flavorName = variant.flavorName
+            def appName = "${flavorName}_v${defaultConfig.getVersionCode()}_${buildDate}-${buildType}.apk"
+
+            outputFileName = appName
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.google.firebase:firebase-messaging:17.3.3'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+
+    implementation 'com.tuyenmonkey:mkloader:1.4.0'
+    implementation 'com.medy:retrofitwrapper:1.4.5'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation('com.github.ozodrukh:CircularReveal:2.0.1@aar') {
+        transitive = true;
+    }
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+
+    implementation 'com.kyleduo.switchbutton:library:1.4.6'
+    //lib for tages
+    implementation 'co.lujun:androidtagview:1.1.7'
+    implementation 'androidx.appcompat:appcompat:1.0.1'
+    implementation files('libs/jxl.jar')
+
+}
+//apply plugin: 'com.google.gms.google-services'
+

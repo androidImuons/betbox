@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayMoreLight">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@drawable/bg_transparent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.customviews.TypefaceTextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:gravity="left"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                android:text="brSoft"
+                android:textColor="@color/nm_title_color"
+                android:textSize="?attr/app_text_size_big"
+                app:custom_font="?attr/app_font_medium" />
+
+            <com.customviews.TypefaceTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nm_blnc_info_title_bg"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp2"
+                android:paddingBottom="@dimen/dp2"
+                android:text="Balance Information"
+                android:textColor="@color/nm_blnc_info_title_color"
+                android:textSize="?attr/app_text_size_small"
+                app:custom_font="?attr/app_font_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EDEDED"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/dp10"
+                        android:paddingBottom="@dimen/dp10">
+
+                        <com.customviews.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/available_credit"
+                            android:textColor="@color/color_black"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_medium" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_available_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="0.00"
+                            android:textColor="@color/color_green"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_white" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/dp10"
+                        android:paddingBottom="@dimen/dp10">
+
+                        <com.customviews.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/credit_limit"
+                            android:textColor="@color/color_black"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_medium" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_credit_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="0.00"
+                            android:textColor="@color/color_green"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/color_white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/dp10"
+                        android:paddingBottom="@dimen/dp10">
+
+                        <com.customviews.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/winning_amount"
+                            android:textColor="@color/color_black"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_medium" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_winning_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="0.00"
+                            android:textColor="?attr/app_text_color"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_white" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/dp10"
+                        android:paddingBottom="@dimen/dp10">
+
+                        <com.customviews.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/net_exposure"
+                            android:textColor="@color/color_black"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_medium" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_net_exposure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="0.00"
+                            android:textColor="@color/color_red"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                app:cardBackgroundColor="@color/nm_menu_bg_color"
+                app:cardCornerRadius="@dimen/dp1"
+                app:cardElevation="@dimen/dp2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_one_page_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp5"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="@dimen/dp7"
+                            android:src="@mipmap/document"
+                            android:tint="?attr/et_img_tint_color" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_one_page_report"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:text="@string/one_page_report"
+                            android:textColor="@color/left_menu_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dv1"
+                        android:background="?attr/app_divider_color"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_cricket"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:padding="@dimen/dp5"
+                            android:src="@mipmap/cricket" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_cricket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:text="@string/text_side_menu_cricket"
+                            android:textColor="@color/nm_menu_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dv1"
+                        android:background="@color/colorGray30" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_football"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:padding="@dimen/dp5"
+                            android:src="@mipmap/football" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_football"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:text="@string/text_side_menu_football"
+                            android:textColor="@color/nm_menu_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dv1"
+                        android:background="@color/colorGray30" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_tennis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:padding="@dimen/dp5"
+                            android:src="@mipmap/tennis_ball" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_tennis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:text="@string/text_side_menu_tennis"
+                            android:textColor="@color/nm_menu_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dv1"
+                        android:background="@color/colorGray30" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_favourites"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:padding="@dimen/dp5"
+                            android:src="@mipmap/star_color_one" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_favourites"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:text="@string/favourites"
+                            android:textColor="@color/nm_menu_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                app:cardBackgroundColor="@color/nm_menu_bg_color"
+                app:cardCornerRadius="@dimen/dp1"
+                app:cardElevation="@dimen/dp2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_bets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:padding="@dimen/dp3"
+                            android:src="@mipmap/my_password_icon_3x"
+                            android:tint="@color/nm_menu_img_tint_color" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_my_bets"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:text="@string/my_bets"
+                            android:textColor="@color/nm_menu_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dv1"
+                        android:background="@color/colorGray30" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_betting_p_l"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:padding="@dimen/dp3"
+                            android:src="@mipmap/refer_icon_3x"
+                            android:tint="@color/nm_menu_img_tint_color" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_betting_p_l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:text="@string/betting_p_l"
+                            android:textColor="@color/nm_menu_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dv1"
+                        android:background="@color/colorGray30" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_account_statement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:padding="@dimen/dp3"
+                            android:src="@mipmap/earm_money_icon_3x"
+                            android:tint="@color/nm_menu_img_tint_color" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_account_statement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:text="@string/account_statement"
+                            android:textColor="@color/nm_menu_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dv1"
+                        android:background="@color/colorGray30" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_transfer_statement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:padding="@dimen/dp3"
+                            android:src="@mipmap/my_network_icon_3x"
+                            android:tint="@color/nm_menu_img_tint_color" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_transfer_statement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:text="@string/transfer_statement"
+                            android:textColor="@color/nm_menu_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                app:cardBackgroundColor="@color/color_white"
+                app:cardCornerRadius="@dimen/dp1"
+                app:cardElevation="@dimen/dp1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_change_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:padding="@dimen/dp3"
+                            android:src="@mipmap/change_password_icon_3x"
+                            android:tint="@color/nm_menu_img_tint_color" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_change_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp15"
+                            android:text="@string/change_password"
+                            android:textColor="@color/nm_menu_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dv1"
+                        android:background="@color/colorGray30" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_sign_out"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp5">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:padding="@dimen/dp5"
+                            android:src="@mipmap/logout"
+                            android:tint="@color/nm_menu_img_tint_color" />
+
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_sign_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:text="@string/sign_out"
+                            android:textColor="@color/nm_menu_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.customviews.TypefaceTextView
+                android:id="@+id/tv_app_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp10"
+                android:gravity="center"
+                android:padding="@dimen/dp5"
+                android:text="Version 1.2.1"
+                android:textColor="@color/nm_menu_version_color"
+                android:textSize="?attr/app_text_size_small"
+                app:custom_font="?attr/app_font_normal" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

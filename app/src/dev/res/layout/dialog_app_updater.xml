@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp20"
+        android:background="@drawable/bg_app_updater"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/actionBarColor"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp45"
+                android:layout_weight="0.4"
+                android:src="@mipmap/logo" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray_50" />
+
+        <com.customviews.TypefaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/dp10"
+            android:text="@string/update_is_available"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sp16"
+            app:custom_font="?attr/app_font_bold" />
+
+
+        <com.customviews.TypefaceTextView
+            android:id="@+id/tv_message_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingStart="@dimen/dp10"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:paddingBottom="@dimen/dp20"
+            android:text=""
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/sp14"
+            app:custom_font="?attr/app_font_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.customviews.TypefaceTextView
+                android:id="@+id/tv_later"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/dp12"
+                android:text="NOT NOW"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/sp16"
+                app:custom_font="?attr/app_font_medium" />
+
+            <com.customviews.TypefaceTextView
+                android:id="@+id/tv_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/dp12"
+                android:text="UPDATE"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp16"
+                app:custom_font="?attr/app_font_medium" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

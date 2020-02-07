@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="one_click_bet_max_length">6</integer>
+    <integer name="match_stack_max_length">8</integer>
+</resources>

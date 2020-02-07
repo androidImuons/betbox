@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_match_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp7"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp7"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.customviews.TypefaceTextView
+            android:id="@+id/tv_match_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/match_odds"
+            android:textColor="@color/dashboard_marque_text_color"
+            android:textSize="?attr/app_text_size_small"
+            app:custom_font="?attr/app_font_medium" />
+
+        <com.customviews.TypefaceTextView
+            android:id="@+id/tv_inplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In-Play"
+            android:textColor="@color/dashboard_marque_text_color"
+            android:textSize="?attr/app_text_size_extra_small"
+            app:custom_font="?attr/app_font_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_match_detail"
+        android:layout_marginTop="@dimen/dp5"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/iv_star_icon"
+                android:layout_width="@dimen/dp18"
+                android:layout_height="@dimen/dp18"
+                android:background="@drawable/dashboard_fav_icon_bg"
+                android:padding="@dimen/dp4"
+                android:src="@mipmap/star_color_two"
+                android:tint="@color/dashboard_favourite_icon_tint_color" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:text="@string/match_odds"
+                    android:textColor="@color/dashboard_marque_text_color"
+                    android:textSize="?attr/app_text_size_small"
+                    app:custom_font="?attr/app_font_medium" />
+
+            </LinearLayout>
+
+            <com.customviews.TypefaceTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Back"
+                android:textColor="@color/dashboard_marque_text_color"
+                android:textSize="?attr/app_text_size_small"
+                app:custom_font="?attr/app_font_normal" />
+
+
+            <com.customviews.TypefaceTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Lay"
+                android:textColor="@color/dashboard_marque_text_color"
+                android:textSize="?attr/app_text_size_small"
+                app:custom_font="?attr/app_font_normal" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dp1"
+            android:layout_height="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp14"
+            android:layout_marginTop="-2dp"
+            android:background="@color/dashboard_marque_text_color" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_selections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_header">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_header"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp5"
+            android:background="@color/color_white"
+            app:cardCornerRadius="@dimen/dp5"
+            app:cardElevation="@dimen/dp2">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_market_suspended"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fl_selections"
+        android:layout_alignBottom="@+id/fl_selections"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp5"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" />
+
+        <com.customviews.TypefaceTextView
+            android:id="@+id/tv_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/colorGrayLight"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="SUSPENDED"
+            android:textColor="?attr/app_text_color"
+            android:textSize="?attr/app_text_size_small"
+            app:custom_font="?attr/app_font_normal" />
+    </LinearLayout>
+
+
+</RelativeLayout>

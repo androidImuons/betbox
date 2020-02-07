@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_bg_color"
+    android:clickable="true">
+
+    <include
+        layout="@layout/include_app_bg_inner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        app:cardBackgroundColor="@color/color_transprent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_market_bets_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_match_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp5"
+                    android:text="Mumbai Indians"
+                    android:textColor="@color/color_black"
+                    android:textSize="?attr/app_text_size_normal"
+                    android:textStyle=""
+                    app:custom_font="?attr/app_font_normal" />
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_market_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp5"
+                    android:text="Mumbai Indians"
+                    android:textColor="@color/color_black"
+                    android:textSize="?attr/app_text_size_normal"
+                    android:textStyle=""
+                    app:custom_font="?attr/app_font_normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dv1"
+                    android:background="@color/colorGray" />
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_market_bets_main"
+                android:padding="@dimen/dp5">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/cb_Show_bet_Info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp8"
+                        android:button="@drawable/checkbox_selector"
+                        android:paddingStart="@dimen/dp5"
+                        android:text="Show bet Info"
+                        android:textColor="@color/dashboard_marque_text_color" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_unmatched_betdata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_unmatch_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_button_accent_radius5"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp8">
+
+                            <com.customviews.TypefaceTextView
+                                android:id="@+id/tv_unmatched_bets"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Unmatched Bets"
+                                android:textColor="@color/dashboard_marque_text_color"
+                                android:textSize="?attr/app_text_size_normal"
+                                android:textStyle=""
+                                app:custom_font="?attr/app_font_normal" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:padding="@dimen/dp5"
+                                android:src="@mipmap/sort_down"
+                                android:tint="@color/dashboard_marque_text_color" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_layout_unmatched"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_unmatch_header1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <com.customviews.TypefaceTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:paddingLeft="@dimen/dp5"
+                                    android:paddingTop="@dimen/dp5"
+                                    android:paddingBottom="@dimen/dp5"
+                                    android:text="Runner"
+                                    android:textColor="@color/dashboard_marque_text_color"
+                                    android:textSize="?attr/app_text_size_normal"
+                                    android:textStyle=""
+                                    app:custom_font="?attr/app_font_normal" />
+
+
+                                <com.customviews.TypefaceTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/dp5"
+                                    android:paddingBottom="@dimen/dp5"
+                                    android:text="Odds"
+                                    android:textColor="@color/dashboard_marque_text_color"
+                                    android:textSize="?attr/app_text_size_normal"
+                                    android:textStyle=""
+                                    app:custom_font="?attr/app_font_normal" />
+
+
+                                <com.customviews.TypefaceTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/dp5"
+                                    android:paddingBottom="@dimen/dp5"
+                                    android:text="Stack"
+                                    android:textColor="@color/dashboard_marque_text_color"
+                                    android:textSize="?attr/app_text_size_small"
+                                    android:textStyle=""
+                                    app:custom_font="?attr/app_font_normal" />
+
+
+                                <com.customviews.TypefaceTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/dp5"
+                                    android:paddingBottom="@dimen/dp5"
+                                    android:text="@string/p_l"
+                                    android:textColor="@color/dashboard_marque_text_color"
+                                    android:textSize="?attr/app_text_size_small"
+                                    android:textStyle=""
+                                    app:custom_font="?attr/app_font_normal" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp10">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recycler_view1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <com.customviews.TypefaceTextView
+                                    android:id="@+id/tv_no_bet_found1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp100"
+                                    android:background="@color/color_white50"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp5"
+                                    android:text="No Bets Found"
+                                    android:textColor="@color/color_white_90"
+                                    android:textSize="?attr/app_text_size_big"
+                                    android:textStyle=""
+                                    android:visibility="gone"
+                                    app:custom_font="?attr/app_font_bold" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_match_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@drawable/bg_button_accent_radius5"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp8">
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_matched_bets"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Matched Bets"
+                            android:textColor="@color/dashboard_marque_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            android:textStyle=""
+                            app:custom_font="?attr/app_font_normal" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:padding="@dimen/dp5"
+                            android:src="@mipmap/sort_down"
+                            android:tint="@color/dashboard_marque_text_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_layout_matched"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_match_header1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.customviews.TypefaceTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:paddingLeft="@dimen/dp5"
+                                android:paddingTop="@dimen/dp5"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="Runner"
+                                android:textColor="@color/dashboard_marque_text_color"
+                                android:textSize="?attr/app_text_size_normal"
+                                android:textStyle=""
+                                app:custom_font="?attr/app_font_normal" />
+
+
+                            <com.customviews.TypefaceTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/dp5"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="Odds"
+                                android:textColor="@color/dashboard_marque_text_color"
+                                android:textSize="?attr/app_text_size_normal"
+                                android:textStyle=""
+                                app:custom_font="?attr/app_font_normal" />
+
+
+                            <com.customviews.TypefaceTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/dp5"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="Stack"
+                                android:textColor="@color/dashboard_marque_text_color"
+                                android:textSize="?attr/app_text_size_small"
+                                android:textStyle=""
+                                app:custom_font="?attr/app_font_normal" />
+
+                            <com.customviews.TypefaceTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/dp5"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="@string/p_l"
+                                android:textColor="@color/dashboard_marque_text_color"
+                                android:textSize="?attr/app_text_size_small"
+                                android:textStyle=""
+                                app:custom_font="?attr/app_font_normal" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <com.customviews.TypefaceTextView
+                                android:id="@+id/tv_no_bet_found"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp100"
+                                android:background="@color/color_white50"
+                                android:gravity="center"
+                                android:padding="@dimen/dp5"
+                                android:text="No Bets Found"
+                                android:textColor="@color/dashboard_marque_text_color_light"
+                                android:textSize="?attr/app_text_size_big"
+                                android:textStyle=""
+                                android:visibility="gone"
+                                app:custom_font="?attr/app_font_bold" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_fancy_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="@drawable/bg_button_accent_radius5"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp8">
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_fancy_bets"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Fancy Bets"
+                            android:textColor="@color/dashboard_marque_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            android:textStyle=""
+                            app:custom_font="?attr/app_font_normal" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:padding="@dimen/dp5"
+                            android:src="@mipmap/sort_down"
+                            android:tint="@color/dashboard_marque_text_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_layout_fancy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_match_header2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.customviews.TypefaceTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:paddingLeft="@dimen/dp5"
+                                android:paddingTop="@dimen/dp5"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="Runner"
+                                android:textColor="@color/dashboard_marque_text_color"
+                                android:textSize="?attr/app_text_size_normal"
+                                android:textStyle=""
+                                app:custom_font="?attr/app_font_normal" />
+
+
+                            <com.customviews.TypefaceTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/dp5"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="Odds"
+                                android:textColor="@color/dashboard_marque_text_color"
+                                android:textSize="?attr/app_text_size_normal"
+                                android:textStyle=""
+                                app:custom_font="?attr/app_font_normal" />
+
+
+                            <com.customviews.TypefaceTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/dp5"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="Stack"
+                                android:textColor="@color/dashboard_marque_text_color"
+                                android:textSize="?attr/app_text_size_small"
+                                android:textStyle=""
+                                app:custom_font="?attr/app_font_normal" />
+
+                            <com.customviews.TypefaceTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/dp5"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="@string/p_l"
+                                android:textColor="@color/dashboard_marque_text_color"
+                                android:textSize="?attr/app_text_size_small"
+                                android:textStyle=""
+                                app:custom_font="?attr/app_font_normal" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_view2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <com.customviews.TypefaceTextView
+                                android:id="@+id/tv_no_bet_found2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp100"
+                                android:background="@color/color_white50"
+                                android:gravity="center"
+                                android:padding="@dimen/dp5"
+                                android:text="No Bets Found"
+                                android:textColor="@color/dashboard_marque_text_color_light"
+                                android:textSize="?attr/app_text_size_big"
+                                android:textStyle=""
+                                android:visibility="gone"
+                                app:custom_font="?attr/app_font_bold" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

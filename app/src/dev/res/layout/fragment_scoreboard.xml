@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_over_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/dp5"
+        app:cardElevation="@dimen/dp3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_accent_topradius5"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:padding="@dimen/dp5"
+                        android:tint="@color/in_play_btn_tint_color"
+                        android:src="@mipmap/music_player_play" />
+
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_match_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:padding="@dimen/dp10"
+                        android:singleLine="true"
+                        android:text="@string/match_odds"
+                        android:textColor="@color/color_white"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_medium" />
+
+                </LinearLayout>
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_name_run_wicket_over"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:paddingLeft="@dimen/dp5"
+                    android:singleLine="true"
+                    android:text="-"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="?attr/app_text_size_normal"
+                    app:custom_font="?attr/app_font_medium" />
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_toss_winner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:paddingLeft="@dimen/dp5"
+                    android:singleLine="true"
+                    android:text="-"
+                    android:textColor="?attr/app_text_color"
+                    android:textSize="?attr/app_text_size_extra_small"
+                    app:custom_font="?attr/app_font_normal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_current_over"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_current_over"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingLeft="@dimen/dp10"
+                    android:text="-"
+                    android:textColor="?attr/app_text_color"
+                    android:textSize="?attr/app_text_size_extra_small"
+                    app:custom_font="?attr/app_font_normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dv1"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:background="?attr/app_divider_color" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:paddingLeft="@dimen/dp5"
+                    android:paddingRight="@dimen/dp5" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dv1"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:background="?attr/app_divider_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_over"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:ellipsize="end"
+                        android:padding="@dimen/dp5"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textColor="?attr/app_text_color"
+                        android:textSize="?attr/app_text_size_extra_small"
+                        app:custom_font="?attr/app_font_normal" />
+
+                    <View
+                        android:layout_width="@dimen/dv1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:background="?attr/app_divider_color" />
+
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_runs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:ellipsize="end"
+                        android:padding="@dimen/dp5"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textColor="?attr/app_text_color"
+                        android:textSize="?attr/app_text_size_extra_small"
+                        app:custom_font="?attr/app_font_normal" />
+
+                    <View
+                        android:layout_width="@dimen/dv1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:background="?attr/app_divider_color" />
+
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_total_run_wickets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:ellipsize="end"
+                        android:padding="@dimen/dp5"
+                        android:singleLine="true"
+                        android:text="0-0"
+                        android:textColor="?attr/app_text_color"
+                        android:textSize="?attr/app_text_size_extra_small"
+                        app:custom_font="?attr/app_font_normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_last_over"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_last_over"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingLeft="@dimen/dp10"
+                    android:text="-"
+                    android:textColor="?attr/app_text_color"
+                    android:textSize="?attr/app_text_size_extra_small"
+                    app:custom_font="?attr/app_font_normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dv1"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:background="?attr/app_divider_color" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:paddingLeft="@dimen/dp5"
+                    android:paddingRight="@dimen/dp5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_over_team2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:ellipsize="end"
+                        android:padding="@dimen/dp5"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textColor="?attr/app_text_color"
+                        android:textSize="?attr/app_text_size_extra_small"
+                        app:custom_font="?attr/app_font_normal" />
+
+                    <View
+                        android:layout_width="@dimen/dv1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:background="?attr/app_divider_color" />
+
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_runs_team2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:ellipsize="end"
+                        android:padding="@dimen/dp5"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textColor="?attr/app_text_color"
+                        android:textSize="?attr/app_text_size_extra_small"
+                        app:custom_font="?attr/app_font_normal" />
+
+                    <View
+                        android:layout_width="@dimen/dv1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:background="?attr/app_divider_color" />
+
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_total_run_wickets_team2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:ellipsize="end"
+                        android:padding="@dimen/dp5"
+                        android:singleLine="true"
+                        android:text="0-0"
+                        android:textColor="?attr/app_text_color"
+                        android:textSize="?attr/app_text_size_extra_small"
+                        app:custom_font="?attr/app_font_normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

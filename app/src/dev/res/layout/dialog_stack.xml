@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <com.customviews.TypefaceTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="EDIT STACK"
+            android:textColor="@color/color_white"
+            android:textSize="?attr/app_text_size_normal"
+            app:custom_font="?attr/app_font_medium" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:background="@color/colorGray_50" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:paddingStart="@dimen/dp10"
+            android:paddingEnd="@dimen/dp10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            android:orientation="horizontal">
+
+            <com.customviews.TypefaceTextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp2"
+                android:background="@drawable/bg_button_gray_radius5"
+                android:gravity="center"
+                android:minWidth="@dimen/dp80"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingTop="@dimen/dp7"
+                android:paddingRight="@dimen/dp10"
+                android:paddingBottom="@dimen/dp7"
+                android:text="Cancel"
+                android:textColor="@color/colorPrimary"
+                android:textSize="?attr/app_text_size_normal"
+                app:custom_font="?attr/app_font_normal" />
+
+            <com.customviews.TypefaceTextView
+                android:id="@+id/tv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:background="@drawable/bg_button_accent_radius5"
+                android:gravity="center"
+                android:minWidth="@dimen/dp80"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingTop="@dimen/dp7"
+                android:paddingRight="@dimen/dp10"
+                android:paddingBottom="@dimen/dp7"
+                android:text="Save"
+                android:textColor="?attr/btn_text_color"
+                android:textSize="?attr/app_text_size_normal"
+                app:custom_font="?attr/app_font_normal" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

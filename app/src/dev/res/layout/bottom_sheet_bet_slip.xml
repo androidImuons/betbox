@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg_color"
+    android:clickable="true"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="@dimen/dp60"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <!--app:layout_behavior="android.support.design.widget.BottomSheetBehavior"-->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_layout_recy_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/sw_click_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:checked="false"
+                        app:kswBackColor="@color/colorGrayLight"
+                        app:kswTintColor="@color/colorAccent" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_header_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_one_click_bet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp5"
+                            android:text="1 Click Betting"
+                            android:textColor="@color/dashboard_marque_text_color"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_edit_stacks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_button_accent_radius5"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/dp5"
+                            android:text="Edit Stakes"
+                            android:textColor="@color/color_white"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_bold" />
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/iv_full_screen"
+                        android:layout_width="@dimen/dp35"
+                        android:layout_height="@dimen/dp35"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:padding="@dimen/dp5"
+                        android:src="@mipmap/ic_full_screen" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="@dimen/dp35"
+                        android:layout_height="@dimen/dp35"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:background="@drawable/bg_button_red_radius80"
+                        android:padding="@dimen/dp5"
+                        android:src="@mipmap/ic_close" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_one_click_betting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp5">
+
+                    <LinearLayout
+                        android:id="@+id/ll_text_views"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_margin="@dimen/dp5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edit_text_stroke"
+                            android:gravity="center"
+                            android:maxLength="@integer/one_click_bet_max_length"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="?attr/et_text_color"
+                            android:textColorHint="?attr/et_hint_text_color"
+                            android:textSize="?attr/app_text_size_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_2"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_margin="@dimen/dp5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edit_text_stroke"
+                            android:gravity="center"
+                            android:maxLength="@integer/one_click_bet_max_length"
+                            android:singleLine="true"
+                            android:text="000"
+                            android:textColor="?attr/et_text_color"
+                            android:textColorHint="?attr/et_hint_text_color"
+                            android:textSize="?attr/app_text_size_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_3"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_margin="@dimen/dp5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edit_text_stroke"
+                            android:gravity="center"
+                            android:maxLength="@integer/one_click_bet_max_length"
+                            android:singleLine="true"
+                            android:text="000"
+                            android:textColor="?attr/et_text_color"
+                            android:textColorHint="?attr/et_hint_text_color"
+                            android:textSize="?attr/app_text_size_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_margin="@dimen/dp5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_button_accent_radius5"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Edit"
+                            android:textColor="?attr/btn_text_color"
+                            android:textSize="?attr/app_text_size_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_edit_views"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.customviews.TypefaceEditText
+                            android:id="@+id/et_1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_margin="@dimen/dp5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edit_text_stroke"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="@integer/one_click_bet_max_length"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="?attr/et_text_color"
+                            android:textColorHint="?attr/et_hint_text_color"
+                            android:textSize="?attr/app_text_size_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+                        <com.customviews.TypefaceEditText
+
+                            android:id="@+id/et_2"
+
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_margin="@dimen/dp5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edit_text_stroke"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="@integer/one_click_bet_max_length"
+                            android:singleLine="true"
+                            android:text="000"
+                            android:textColor="?attr/et_text_color"
+                            android:textColorHint="?attr/et_hint_text_color"
+                            android:textSize="?attr/app_text_size_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+                        <com.customviews.TypefaceEditText
+                            android:id="@+id/et_3"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_margin="@dimen/dp5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edit_text_stroke"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:maxLength="@integer/one_click_bet_max_length"
+                            android:singleLine="true"
+                            android:text="000"
+                            android:textColor="?attr/et_text_color"
+                            android:textColorHint="?attr/et_hint_text_color"
+                            android:textSize="?attr/app_text_size_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/bg_button_gray_radius5"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/dp10"
+                            android:paddingTop="@dimen/dp5"
+                            android:paddingRight="@dimen/dp10"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="Cancel"
+                            android:textColor="?attr/app_text_color"
+                            android:textSize="?attr/app_text_size_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp8"
+                            android:layout_toRightOf="@+id/tv_cancel"
+                            android:background="@drawable/bg_button_accent_radius5"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/dp10"
+                            android:paddingTop="@dimen/dp5"
+                            android:paddingRight="@dimen/dp10"
+                            android:paddingBottom="@dimen/dp5"
+                            android:text="@string/save"
+                            android:textColor="?attr/btn_text_color"
+                            android:textSize="?attr/app_text_size_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/dp8"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                    <com.customviews.TypefaceTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:text="Liability : "
+                        android:textColor="@color/color_red"
+                        android:textSize="?attr/app_text_size_small"
+                        app:custom_font="?attr/app_font_bold" />
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_liability_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/color_red"
+                        android:textSize="?attr/app_text_size_small"
+                        app:custom_font="?attr/app_font_bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_layout_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp50"
+                android:background="@color/bottom_sheet_action_btn_bg_color"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                android:paddingRight="@dimen/dp10"
+                android:paddingBottom="@dimen/dp5">
+
+                <CheckBox
+                    android:id="@+id/cb_confirm_batting_first"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/checkbox_selector"
+                    android:maxLines="2"
+                    android:padding="@dimen/dp3"
+                    android:text="Confirm bets before placing"
+                    android:textColor="@color/dashboard_marque_text_color"
+                    android:textSize="?attr/app_text_size_extra_small" />
+
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_remove_all_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_red"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:minWidth="@dimen/dp80"
+                    android:padding="@dimen/dp5"
+                    android:singleLine="true"
+                    android:text="Clear All"
+                    android:textColor="@color/color_white"
+                    android:textSize="?attr/app_text_size_small"
+                    app:custom_font="?attr/app_font_normal" />
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_place_bets_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:background="@drawable/bg_placebet_selector"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:minWidth="@dimen/dp80"
+                    android:padding="@dimen/dp5"
+                    android:singleLine="true"
+                    android:text="Place Bets"
+                    android:textColor="@color/place_bet_text_color"
+                    android:textSize="?attr/app_text_size_small"
+                    app:custom_font="?attr/app_font_normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottom_sheet_action_btn_bg_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingTop="@dimen/dp8"
+        android:paddingRight="@dimen/dp10"
+        android:paddingBottom="@dimen/dp8">
+
+        <CheckBox
+            android:id="@+id/cb_confirm_batting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/checkbox_selector"
+            android:maxLines="2"
+            android:padding="@dimen/dp3"
+            android:text="Confirm bets before placing"
+            android:textColor="@color/dashboard_marque_text_color"
+            android:textSize="?attr/app_text_size_extra_small" />
+
+
+        <com.customviews.TypefaceTextView
+            android:id="@+id/tv_remove_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_red"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:padding="@dimen/dp5"
+            android:singleLine="true"
+            android:text="Clear All"
+            android:textColor="@color/color_white"
+            android:textSize="?attr/app_text_size_small"
+            app:custom_font="?attr/app_font_normal" />
+
+        <com.customviews.TypefaceTextView
+            android:id="@+id/tv_place_bets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:background="@drawable/bg_placebet_selector"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:padding="@dimen/dp5"
+            android:singleLine="true"
+            android:text="Place Bets"
+            android:textColor="@color/place_bet_text_color"
+            android:textSize="?attr/app_text_size_small"
+            app:custom_font="?attr/app_font_normal" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_no_record_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp60"
+        android:layout_marginRight="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp10"
+        app:cardBackgroundColor="@color/color_transprent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
+
+        <com.customviews.TypefaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp15"
+            android:text="No Record Found"
+            android:textColor="@color/dashboard_marque_text_color"
+            android:textSize="?attr/app_text_size_normal"
+            app:custom_font="?attr/app_font_bold" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff1515</color>
+    <color name="colorPrimaryDark">#ff1515</color>
+    <color name="colorAccent">#f09e15</color>
+    <color name="colorAccent2">#db931b</color>
+    <color name="screen_bg_color">@color/color_white</color>
+    <color name="er_btn_color">@color/colorAccent</color>
+
+
+    <!-- progress dialog color -->
+    <color name="pd_card_bg_color">@color/color_white</color>
+    <color name="pb_progress_color">@color/colorPrimary</color>
+    <color name="pb_message_color">@color/colorAccent</color>
+
+    <color name="dashboard_marque_text_color">@color/color_black</color>
+    <color name="dashboard_marque_text_color_light">@color/color_black80</color>
+    <color name="dashboard_favourite_icon_tint_color">@color/colorAccent</color>
+    <color name="in_play_btn_tint_color">@color/color_green</color>
+
+    <color name="betslip_tag_bg_color">@color/colorAccent</color>
+    <color name="betslip_tag_text_color">@color/color_black</color>
+    <color name="betslip_match_title_color">@color/color_black</color>
+
+    <color name="bottom_sheet_action_btn_bg_color">@color/color_black30</color>
+
+    <color name="tab_bg_color">#cc8309</color>
+    <color name="tab_indicator_color">@color/colorPrimary</color>
+    <color name="tab_selected_text_color">@color/color_white</color>
+    <color name="tab_text_color">@color/color_black</color>
+
+
+    <color name="nm_title_color">@color/color_black</color>
+    <color name="nm_blnc_info_title_color">@color/color_white</color>
+    <color name="nm_blnc_info_title_bg">@color/colorAccent</color>
+    <color name="nm_menu_bg_color">@color/color_white</color>
+    <color name="nm_menu_text_color">@color/color_black</color>
+    <color name="nm_menu_version_color">@color/colorGray</color>
+    <color name="nm_menu_img_tint_color">@color/colorAccent</color>
+
+    <color name="fancy_data_detail_bg_color">#80ff1515</color>
+
+</resources>

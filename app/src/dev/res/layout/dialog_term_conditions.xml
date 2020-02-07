@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/rl_main_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <include
+            layout="@layout/include_app_bg_inner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:background="?attr/actionBarColor"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/iv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:src="@mipmap/logo" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@+id/ll_title"
+                android:background="@color/colorGray_50" />
+
+
+        </RelativeLayout>
+
+
+        <WebView
+            android:id="@+id/wv_terms_conditions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_accept"
+            android:layout_below="@+id/rl_header"
+            android:background="@color/screen_bg_color" />
+
+
+        <com.customviews.TypefaceTextView
+            android:id="@+id/tv_accept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:text="@string/accept_terms_conditions"
+            android:textColor="?attr/btn_text_color"
+            android:textSize="?attr/app_text_size_normal"
+            app:custom_font="?attr/app_font_normal" />
+
+    </RelativeLayout>
+
+</io.codetail.widget.RevealFrameLayout>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_sign_out"
+        android:background="@color/color_white"
+        android:scrollbarThumbVertical="@drawable/bg_transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp10"
+                android:orientation="vertical"
+                android:padding="@dimen/dp10">
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp10"
+                    android:text="brSoft"
+                    android:textColor="@color/colorGray"
+                    android:textSize="?attr/app_text_size_big"
+                    app:custom_font="?attr/app_font_medium" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dv1"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="?attr/app_divider_color" />
+
+
+                <com.customviews.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:padding="@dimen/dp5"
+                    android:text="@string/text_balance_information"
+                    android:textColor="@color/left_menu_text_color"
+                    android:textSize="?attr/app_text_size_normal"
+                    app:custom_font="?attr/app_font_bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp5">
+
+                    <com.customviews.TypefaceTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/available_credit"
+                        android:textColor="@color/left_menu_text_color"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_normal" />
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_available_credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="@color/color_green"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp5">
+
+                    <com.customviews.TypefaceTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/credit_limit"
+                        android:textColor="@color/left_menu_text_color"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_normal" />
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_credit_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="@color/color_green"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp5">
+
+                    <com.customviews.TypefaceTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/winning_amount"
+                        android:textColor="@color/left_menu_text_color"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_normal" />
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_winning_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="?attr/app_text_color"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp5">
+
+                    <com.customviews.TypefaceTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/net_exposure"
+                        android:textColor="@color/left_menu_text_color"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_normal" />
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_net_exposure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0"
+                        android:textColor="@color/color_red"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_normal" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dv1"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="?attr/app_divider_color" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_my_bets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_my_bets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:text="@string/my_bets"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dv1"
+                    android:background="?attr/app_divider_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_betting_p_l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_betting_p_l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:text="@string/betting_p_l"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dv1"
+                    android:background="?attr/app_divider_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_account_statement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_account_statement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:text="@string/account_statement"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dv1"
+                    android:background="?attr/app_divider_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_transfer_statement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_transfer_statement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:text="@string/transfer_statement"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dv1"
+                    android:background="?attr/app_divider_color" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_change_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_pressed_state_light_gray_color"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10">
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_change_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:text="@string/change_password"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="?attr/app_text_size_normal"
+                        app:custom_font="?attr/app_font_bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_sign_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10">
+
+        <ImageView
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:src="@mipmap/logout"
+            android:tint="@color/color_black" />
+
+        <com.customviews.TypefaceTextView
+            android:id="@+id/tv_sign_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:text="@string/sign_out"
+            android:textColor="@color/left_menu_text_color"
+            android:textSize="?attr/app_text_size_normal"
+            app:custom_font="?attr/app_font_bold" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/rl_app_main_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/include_app_bg_inner"/>
+
+        <FrameLayout
+            android:id="@+id/fl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/dp3"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="@dimen/dp1"
+                app:cardElevation="@dimen/dp3">
+
+                <include
+                    android:id="@+id/rl_tool_bar"
+                    layout="@layout/toolbar_common" />
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fl_toolbar"
+            android:orientation="horizontal">
+
+            <com.customviews.MarqueeTextView
+                android:id="@+id/tv_headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:background="@color/headline_bg_color"
+                android:visibility="gone"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="@dimen/dp5"
+                android:singleLine="true"
+                android:text="Headlines..."
+                android:textColor="@color/headline_text_color"
+                android:textSize="?attr/app_text_size_small"
+                app:custom_font="?attr/app_font_normal" />
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_full_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_headline" />
+
+        <ImageView
+            android:id="@+id/iv_betSlip"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp15"
+            android:src="@mipmap/bet_slip_image" />
+
+
+        <FrameLayout
+            android:id="@+id/bottom_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_headline"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@null">
+
+        <include
+            layout="@layout/include_leftmenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+    <!--<android.support.design.widget.NavigationView-->
+    <!--android:id="@+id/navigation_view_right"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="end"-->
+    <!--android:background="@null">-->
+
+    <!--<include-->
+    <!--layout="@layout/include_rightmenu"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <!--</android.support.design.widget.NavigationView>-->
+
+</androidx.drawerlayout.widget.DrawerLayout>

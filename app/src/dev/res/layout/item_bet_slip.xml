@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp8"
+        android:layout_marginTop="@dimen/dp2"
+        android:layout_marginRight="@dimen/dp8"
+        android:layout_marginBottom="@dimen/dp5"
+        app:cardBackgroundColor="@color/color_white"
+        app:cardCornerRadius="@dimen/dp5"
+        app:cardElevation="@dimen/dp2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.customviews.TypefaceTextView
+                android:id="@+id/tv_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp8"
+                android:paddingTop="@dimen/dp5"
+                android:text="Error Message"
+                android:textColor="@color/color_red"
+                android:textSize="?attr/app_text_size_normal"
+                app:custom_font="?attr/app_font_normal" />
+
+            <com.customviews.TypefaceTextView
+                android:id="@+id/tv_type_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_error"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp8"
+                android:text="@string/text_back"
+                android:textColor="?attr/app_text_color"
+                android:textSize="?attr/app_text_size_small"
+                android:visibility="gone"
+                app:custom_font="?attr/app_font_normal" />
+
+            <com.customviews.TypefaceTextView
+                android:id="@+id/tv_match_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_type_name"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp8"
+                android:paddingTop="@dimen/dp2"
+                android:paddingBottom="@dimen/dp2"
+                android:text="Pakistan v Australia "
+                android:textColor="@color/betslip_match_title_color"
+                android:textSize="?attr/app_text_size_small"
+                app:custom_font="?attr/app_font_normal" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_layout_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_match_name"
+                android:background="@color/color_blue_light"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp8"
+                android:paddingRight="@dimen/dp8">
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_type_name"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:gravity="center_vertical"
+                    android:text="Pakistan"
+                    android:textColor="?attr/app_text_color"
+                    android:textSize="?attr/app_text_size_small"
+                    app:custom_font="?attr/app_font_normal" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.customviews.TypefaceTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Odds"
+                            android:textColor="?attr/app_text_color"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_decrease_odds"
+                                android:layout_width="@dimen/dp25"
+                                android:layout_height="@dimen/dp25"
+                                android:layout_marginRight="@dimen/dp5"
+                                android:background="@drawable/bg_circle_radius1black"
+                                android:padding="@dimen/dp5"
+                                android:src="@mipmap/ic_minus"
+                                android:tint="@color/color_black" />
+
+                            <com.customviews.TypefaceEditText
+                                android:id="@+id/et_odds"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_border"
+                                android:gravity="center_vertical"
+                                android:hint="0.0"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:padding="@dimen/dp5"
+                                android:singleLine="true"
+                                android:textColor="?attr/app_text_color"
+                                android:textSize="?attr/app_text_size_small"
+                                app:custom_font="?attr/app_font_normal" />
+
+                            <ImageView
+                                android:id="@+id/iv_increase_odds"
+                                android:layout_width="@dimen/dp25"
+                                android:layout_height="@dimen/dp25"
+                                android:layout_marginLeft="@dimen/dp5"
+                                android:background="@drawable/bg_circle_radius1black"
+                                android:padding="@dimen/dp5"
+                                android:src="@mipmap/ic_plus"
+                                android:tint="@color/color_black" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.customviews.TypefaceTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Stake"
+                            android:textColor="?attr/app_text_color"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_bold" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_border">
+
+                            <com.customviews.TypefaceEditText
+                                android:id="@+id/et_stake"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:hint="0"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:padding="@dimen/dp5"
+                                android:singleLine="true"
+                                android:textColor="?attr/app_text_color"
+                                android:textSize="?attr/app_text_size_small"
+                                app:custom_font="?attr/app_font_normal" />
+
+                            <ImageView
+                                android:id="@+id/iv_increase_stake"
+                                android:layout_width="@dimen/dp25"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_gravity="right"
+                                android:background="@drawable/bg_border"
+                                android:padding="@dimen/dp5"
+                                android:src="@mipmap/ic_arrow_up"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/iv_decrease_stake"
+                                android:layout_width="@dimen/dp25"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_gravity="right|bottom"
+                                android:background="@drawable/bg_border"
+                                android:padding="@dimen/dp5"
+                                android:src="@mipmap/ic_arrow_down"
+                                android:visibility="gone" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_profit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_weight="0.8"
+                        android:orientation="vertical">
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_profit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Profit : "
+                            android:textColor="?attr/app_text_color"
+                            android:textSize="?attr/app_text_size_extra_small"
+                            app:custom_font="?attr/app_font_bold" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_profit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:hint="0.00"
+                            android:paddingTop="@dimen/dp5"
+                            android:paddingBottom="@dimen/dp5"
+                            android:singleLine="true"
+                            android:textColor="?attr/app_text_color"
+                            android:textColorHint="?attr/app_text_color"
+                            android:textSize="?attr/app_text_size_small"
+                            app:custom_font="?attr/app_font_normal" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:padding="@dimen/dp2"
+                        android:src="@mipmap/ic_close"
+                        android:tint="@color/color_red" />
+
+                </LinearLayout>
+
+                <co.lujun.androidtagview.TagContainerLayout
+                    android:id="@+id/tag_container_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sp14"
+                    android:layout_marginBottom="@dimen/dp8"
+                    android:background="@null"
+                    app:container_background_color="@color/color_transparent_white"
+                    app:container_border_color="@color/color_transparent_white"
+                    app:container_border_radius="3dp"
+                    app:container_border_width="0dp"
+                    app:container_enable_drag="false"
+                    app:horizontal_interval="3dp"
+                    app:tag_background_color="@color/betslip_tag_bg_color"
+                    app:tag_border_color="@color/color_transparent_white"
+                    app:tag_border_width="@dimen/dp1"
+                    app:tag_clickable="true"
+                    app:tag_corner_radius="3dp"
+                    app:tag_horizontal_padding="@dimen/dp8"
+                    app:tag_ripple_alpha="0"
+                    app:tag_text_color="@color/betslip_tag_text_color"
+                    app:tag_text_size="?attr/app_text_size_extra_small"
+                    app:tag_theme="none"
+                    app:tag_vertical_padding="@dimen/dp8"
+                    app:vertical_interval="@dimen/dp5" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

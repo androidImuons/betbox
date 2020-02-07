@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/include_app_bg_inner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/view_nested_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/match_name_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:orientation="vertical">
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_match_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Mumbai Indians"
+                        android:textColor="@color/dashboard_marque_text_color"
+                        android:textSize="?attr/app_text_size_small"
+                        app:custom_font="?attr/app_font_normal" />
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="fsdfs"
+                        android:textColor="@color/dashboard_marque_text_color_light"
+                        android:textSize="?attr/app_text_size_extra_small"
+                        android:textStyle=""
+                        app:custom_font="?attr/app_font_normal" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/match_score2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/match_name_detail"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:background="@drawable/bg_button_white_radius5"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_accent_topradius5"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:padding="@dimen/dp5"
+                            android:src="@mipmap/music_player_play"
+                            android:tint="@color/in_play_btn_tint_color" />
+
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_match_name_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:padding="@dimen/dp10"
+                            android:singleLine="true"
+                            android:text="@string/match_odds"
+                            android:textColor="@color/dashboard_marque_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_cricket_score_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_first_inning"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/dp5"
+                                android:paddingEnd="@dimen/dp5">
+
+                                <com.customviews.TypefaceTextView
+                                    android:id="@+id/tv_team1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="Team1"
+                                    android:textColor="?attr/app_text_color"
+                                    android:textSize="?attr/app_text_size_extra_small"
+                                    app:custom_font="?attr/app_font_normal" />
+
+
+                                <com.customviews.TypefaceTextView
+                                    android:id="@+id/tv_team2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:gravity="right"
+                                    android:singleLine="true"
+                                    android:text="Team2"
+                                    android:textColor="?attr/app_text_color"
+                                    android:textSize="?attr/app_text_size_extra_small"
+                                    app:custom_font="?attr/app_font_normal" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/dp5"
+                                android:paddingEnd="@dimen/dp5">
+
+                                <com.customviews.TypefaceTextView
+                                    android:id="@+id/tv_team1_score"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="20/3 (10.3)"
+                                    android:textColor="?attr/app_text_color"
+                                    android:textSize="?attr/app_text_size_extra_small"
+                                    app:custom_font="?attr/app_font_normal" />
+
+                                <com.customviews.TypefaceTextView
+                                    android:id="@+id/tv_team2_score"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:gravity="right"
+                                    android:singleLine="true"
+                                    android:text="10/3 (10)"
+                                    android:textColor="?attr/app_text_color"
+                                    android:textSize="?attr/app_text_size_extra_small"
+                                    app:custom_font="?attr/app_font_normal" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_second_inning"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dv1"
+                                android:background="@color/colorPrimary" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/dp5"
+                                android:paddingEnd="@dimen/dp5">
+
+                                <com.customviews.TypefaceTextView
+                                    android:id="@+id/tv_team11"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="Team1"
+                                    android:textColor="?attr/app_text_color"
+                                    android:textSize="?attr/app_text_size_extra_small"
+                                    app:custom_font="?attr/app_font_normal" />
+
+                                <com.customviews.TypefaceTextView
+                                    android:id="@+id/tv_team22"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:gravity="right"
+                                    android:singleLine="true"
+                                    android:text="Team2"
+                                    android:textColor="?attr/app_text_color"
+                                    android:textSize="?attr/app_text_size_extra_small"
+                                    app:custom_font="?attr/app_font_normal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/dp5"
+                                android:paddingEnd="@dimen/dp5">
+
+                                <com.customviews.TypefaceTextView
+                                    android:id="@+id/tv_team11_score"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="20/3 (10.3)"
+                                    android:textColor="?attr/app_text_color"
+                                    android:textSize="?attr/app_text_size_extra_small"
+                                    app:custom_font="?attr/app_font_normal" />
+
+                                <com.customviews.TypefaceTextView
+                                    android:id="@+id/tv_team22_score"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:gravity="right"
+                                    android:singleLine="true"
+                                    android:text="10/3 (10)"
+                                    android:textColor="?attr/app_text_color"
+                                    android:textSize="?attr/app_text_size_extra_small"
+                                    app:custom_font="?attr/app_font_normal" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_tenis_score_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10"
+                        android:background="@color/color_white"
+                        android:orientation="vertical">
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_tenis_current_set"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginBottom="@dimen/dp10"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Set 3 - Game 1 - Point 1"
+                            android:textColor="@color/color_green"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_medium" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:background="?attr/app_divider_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.customviews.TypefaceTextView
+                                android:id="@+id/tv_tenis_home_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="test"
+                                android:textColor="?attr/app_text_color"
+                                android:textSize="?attr/app_text_size_small"
+                                app:custom_font="?attr/app_font_normal" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="left"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/view_home_serving"
+                                    android:layout_width="@dimen/dp10"
+                                    android:layout_height="@dimen/dp10"
+                                    android:layout_marginStart="@dimen/dp10"
+                                    android:background="@drawable/team_serving_selector" />
+                            </LinearLayout>
+
+
+                            <com.customviews.TypefaceTextView
+                                android:id="@+id/tv_tenis_home_score"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="test"
+                                android:textColor="?attr/app_text_color"
+                                android:textSize="?attr/app_text_size_normal"
+                                app:custom_font="?attr/app_font_normal" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:background="?attr/app_divider_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.customviews.TypefaceTextView
+                                android:id="@+id/tv_tenis_away_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.3"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="test"
+                                android:textColor="?attr/app_text_color"
+                                android:textSize="?attr/app_text_size_small"
+                                app:custom_font="?attr/app_font_normal" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:gravity="left"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/view_away_serving"
+                                    android:layout_width="@dimen/dp10"
+                                    android:layout_height="@dimen/dp10"
+                                    android:layout_marginStart="@dimen/dp10"
+                                    android:background="@drawable/team_serving_selector" />
+                            </LinearLayout>
+
+
+                            <com.customviews.TypefaceTextView
+                                android:id="@+id/tv_tenis_away_score"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:text="test"
+                                android:textColor="?attr/app_text_color"
+                                android:textSize="?attr/app_text_size_normal"
+                                app:custom_font="?attr/app_font_normal" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_sccore_score_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+                <com.customviews.WrappingViewPager
+                    android:id="@+id/match_score_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/match_score2" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/market_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.customviews.TypefaceTextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/dp10"
+        android:text="Score Board Coming Soon."
+        android:textColor="@color/dashboard_marque_text_color_light"
+        android:textSize="?attr/app_text_size_extra_big"
+        android:visibility="gone"
+        app:custom_font="?attr/app_font_medium" />
+
+</RelativeLayout>

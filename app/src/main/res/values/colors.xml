@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1d2645</color>
+    <color name="colorPrimaryDark">#1d2645</color>
+    <color name="colorAccent">#5b9a01</color>
+    <color name="screen_bg_color">@color/colorPrimary</color>
+    <color name="er_btn_color">#fa4a3c</color>
+    <color name="colorAccent2">#78C31F</color>
+
+    <color name="colorGrayMoreLight">#f1f0f0</color>
+    <color name="colorGrayLight">#c9c5c5</color>
+    <color name="colorGray">#959595</color>
+    <color name="colorGray_50">#50959595</color>
+    <color name="place_bet_color">#e0e0e0</color>
+    <color name="colorGray_90">#50959595</color>
+    <color name="colorGray_10">#10959595</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_white50">#50FFFFFF</color>
+    <color name="color_white_90">#90FFFFFF</color>
+    <color name="color_header">#708388</color>
+
+    <color name="tab_bg_color">@color/color_white</color>
+    <color name="tab_indicator_color">@color/colorAccent</color>
+    <color name="tab_selected_text_color">@color/colorAccent</color>
+    <color name="tab_text_color">@color/colorPrimary</color>
+
+
+    <!-- editText color login/ sign up -->
+    <color name="et_hint_color">#80000000</color>
+    <color name="et_text_color">#000000</color>
+    <color name="et_bg_color">#ffffff</color>
+    <color name="et_img_tint_color">#000000</color>
+
+    <!-- progress dialog color -->
+    <color name="pd_card_bg_color">@color/color_white</color>
+    <color name="pb_progress_color">@color/colorAccent</color>
+    <color name="pb_message_color">@color/colorAccent</color>
+
+    <color name="dashboard_marque_text_color">@color/color_white</color>
+    <color name="dashboard_marque_text_color_light">@color/color_white_90</color>
+    <color name="dashboard_favourite_icon_tint_color">@color/color_white</color>
+    <color name="in_play_btn_tint_color">@color/color_green</color>
+    <color name="bottom_sheet_action_btn_bg_color">@color/color_white50</color>
+
+    <color name="fancy_data_detail_bg_color">@color/colorPrimary</color>
+
+
+    <color name="nm_title_color">@color/colorPrimary</color>
+    <color name="nm_blnc_info_title_color">@color/color_white</color>
+    <color name="nm_blnc_info_title_bg">@color/colorPrimary</color>
+    <color name="nm_menu_bg_color">@color/color_white</color>
+    <color name="nm_menu_text_color">@color/colorPrimary</color>
+    <color name="nm_menu_version_color">@color/colorAccent</color>
+    <color name="nm_menu_img_tint_color">@color/colorPrimary</color>
+
+    <color name="betslip_tag_bg_color">@color/colorPrimary</color>
+    <color name="betslip_tag_text_color">@color/color_black</color>
+    <color name="betslip_match_title_color">@color/colorPrimary</color>
+
+
+    <color name="button_bg_color">#2e5159</color>
+    <color name="button_bg_color_sec">#4e5050</color>
+    <color name="text_link_color">#2e5159</color>
+    <color name="color_red">#fa4a3c</color>
+    <color name="color_light_red">#e29b95</color>
+    <color name="color_sky">#aad4f4</color>
+    <color name="color_sky50">#50aad4f4</color>
+    <color name="color_lightest_red">#f1cbd3</color>
+
+    <color name="color_back">#62c3f6</color>
+    <color name="color_lay">#f9cad4</color>
+    <color name="color_result_awaiting">#B8FDA4</color>
+
+    <!--Sunil-->
+    <color name="color_yellow">#FFB80D</color>
+    <color name="color_yellow_transparent">#95FFB80D</color>
+    <color name="color_blue_light">#A7D8FD</color>
+    <color name="color_blue">#2388d4</color>
+    <color name="color_blue50">#502388d4</color>
+    <color name="color_blue_light_dark">#006FAB</color>
+    <color name="color_blue_dark">#005283</color>
+    <color name="color_pink">#fb7574</color>
+    <color name="color_pink50">#50fb7574</color>
+    <color name="color_pink_light_dark">#E56266</color>
+    <color name="color_pink_dark">#BA3A40</color>
+    <color name="color_green">#5b9a01</color>
+    <color name="color_green30">#305b9a01</color>
+    <color name="color_light_green">#83c68a</color>
+    <color name="color_green_bright">#08EC26</color>
+    <color name="colorGray30">#30959595</color>
+    <color name="color_transparent_white">#00FFFFFF</color>
+    <color name="color_transprent">#00ffffff</color>
+    <color name="color_black">#000000</color>
+    <color name="color_black80">#80000000</color>
+    <color name="color_black50">#50000000</color>
+    <color name="color_black30">#30000000</color>
+
+    <color name="headline_bg_color">#ef9b0f</color>
+    <color name="headline_text_color">#ffffff</color>
+
+</resources>

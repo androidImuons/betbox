@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/include_app_bg_inner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:scrollbarThumbVertical="@drawable/bg_transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_current_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type"
+                    android:textColor="@color/dashboard_marque_text_color"
+                    android:textSize="?attr/app_text_size_normal"
+                    app:custom_font="?attr/app_font_medium" />
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/et_height"
+                    android:background="?attr/et_bg_drawable"
+                    android:hint="@string/bet_history"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp10"
+                    android:singleLine="true"
+
+                    android:textColor="?attr/et_text_color"
+                    android:textColorHint="?attr/et_hint_text_color"
+                    android:textSize="?attr/app_text_size_normal"
+                    app:custom_font="?attr/app_font_normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.customviews.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/from_date"
+                            android:textColor="@color/dashboard_marque_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_medium" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_from_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/et_height"
+                            android:background="?attr/et_bg_drawable"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp10">
+
+                            <com.customviews.TypefaceTextView
+                                android:id="@+id/tv_from_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint=""
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="?attr/et_text_color"
+                                android:textColorHint="?attr/et_hint_text_color"
+                                android:textSize="?attr/app_text_size_normal"
+                                app:custom_font="?attr/app_font_normal" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.customviews.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/to_date"
+                            android:textColor="@color/dashboard_marque_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_medium" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_to_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/et_height"
+                            android:background="?attr/et_bg_drawable"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+
+                            android:padding="@dimen/dp10">
+
+                            <com.customviews.TypefaceTextView
+                                android:id="@+id/tv_to_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint=""
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="?attr/et_text_color"
+                                android:textColorHint="?attr/et_hint_text_color"
+                                android:textSize="?attr/app_text_size_normal"
+                                app:custom_font="?attr/app_font_normal" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.customviews.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/from_time"
+                            android:textColor="@color/dashboard_marque_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_medium" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_from_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/et_height"
+                            android:background="?attr/et_bg_drawable"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:maxLines="1"
+                            android:padding="@dimen/dp10"
+                            android:singleLine="true"
+                            android:textColor="?attr/et_text_color"
+                            android:textColorHint="?attr/et_hint_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.customviews.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/to_time"
+                            android:textColor="@color/dashboard_marque_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_medium" />
+
+                        <com.customviews.TypefaceTextView
+                            android:id="@+id/tv_to_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/et_height"
+                            android:background="?attr/et_bg_drawable"
+                            android:gravity="center_vertical"
+                            android:hint=""
+                            android:maxLines="1"
+                            android:padding="@dimen/dp10"
+                            android:singleLine="true"
+                            android:textColor="?attr/et_text_color"
+                            android:textColorHint="?attr/et_hint_text_color"
+                            android:textSize="?attr/app_text_size_normal"
+                            app:custom_font="?attr/app_font_normal" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_accent_radius80"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/dp15"
+                        android:paddingTop="@dimen/dp3"
+                        android:paddingRight="@dimen/dp15"
+                        android:paddingBottom="@dimen/dp3"
+                        android:text="@string/submit"
+                        android:textColor="?attr/btn_text_color"
+                        android:textSize="?attr/app_text_size_small"
+                        app:custom_font="?attr/app_font_normal" />
+
+                    <com.customviews.TypefaceTextView
+                        android:id="@+id/tv_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:background="@drawable/bg_button_accent_radius80"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/dp15"
+                        android:paddingTop="@dimen/dp3"
+                        android:paddingRight="@dimen/dp15"
+                        android:paddingBottom="@dimen/dp3"
+                        android:text="@string/reset"
+                        android:textColor="?attr/btn_text_color"
+                        android:textSize="?attr/app_text_size_small"
+                        app:custom_font="?attr/app_font_normal" />
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_crate_excel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_button_accent_radius80"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dp15"
+                        android:paddingTop="@dimen/dp3"
+                        android:paddingRight="@dimen/dp15"
+                        android:paddingBottom="@dimen/dp3">
+
+                        <com.customviews.TypefaceTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/export_to_excel"
+                            android:textColor="?attr/btn_text_color"
+                            android:textSize="?attr/app_text_size_small"
+                            app:custom_font="?attr/app_font_normal" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/btn_height"
+                    android:background="@color/tab_bg_color"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/tab_indicator_color"
+                    app:tabIndicatorHeight="@dimen/dp2"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/tab_selected_text_color"
+                    app:tabTextColor="@color/tab_text_color" />
+
+                <com.customviews.TypefaceTextView
+                    android:id="@+id/tv_no_record_found"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp80"
+                    android:text="@string/no_records_found"
+                    android:textColor="@color/dashboard_marque_text_color_light"
+                    android:textSize="?attr/app_text_size_normal"
+                    app:custom_font="?attr/app_font_normal" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5" />
+
+                <include
+                    layout="@layout/layout_pager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20" />
+
+                <LinearLayout
+                    android:id="@+id/ll_add_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp80"
+                    android:orientation="vertical" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
